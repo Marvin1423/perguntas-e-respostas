@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #E5E5E5;
+}
+
+.container{
+    display: flex;
+    background-color: #FCFCFC;
+    min-width: 700px;
+    min-height: 347px;
+    align-items: center;
+    justify-content: end;
+    border-radius: 21px;
+    box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.25);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.container .imagem-vr{
+    width: 278px;
+    height: 293px;
+    position: absolute;
+    right: 480px;
+}
+
+.lado-faq{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lado-faq h1{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.item{
+    background-image: url(../images/seta.png);
+    background-repeat: no-repeat;
+    background-position: top 5px right 15px;
+    background-size: 15px;
+    border-bottom: solid 1px #D4D4D4;
+    width: 410px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item:last-child{
+    border: none;
+}
+
+.pergunta{
+    font-size: 19px;
+    font-weight: 500;
+    width: 90%;
+    margin: 10px 0;
+    transition: 0.2s;
+    margin-top: 8px;
+}
+
+.pergunta:hover{
+    color: red;
+}
+
+.resposta{
+    font-size: 16px;
+    font-weight: 300;
+    margin: 5px 0;
+    width: 400px;
+    transition: 0.3s ease-in-out;
+    display: none;
+}
+
+.item.ativo .resposta{
+    display: block;
+}
+
+.item.ativo{
+    background-image: url(../images/seta\ aberta.png);
+}
+
+@media(max-width: 845px){
+    .container{
+        flex-direction: column;
+        padding-bottom: 50px;
+        margin: 20px 0;
+        min-height: 580px;
+        min-width: 520px;
+        align-items: center;
+    }
+
+    .item{
+        width: 450px;
+    }
+
+    .lado-faq h1{
+        align-self: center;
+    }
+
+    .imagem-vr{
+        top: 10px;
+        left: 125px;
+    }
+}
+
+@media(max-width: 560px){
+    .container{
+        min-height: 560px;
+        margin: 20px 0;
+        min-width: 100px;
+    }
+
+    .item{
+        width: 280px;
+    }
+
+    .lado-faq{
+        align-items: center;
+        width: 340px;
+    }
+
+    .container .imagem-vr{
+        width: 210px;
+        height: 220px;
+        left: 75px;
+        top: 30px;
+    }
+
+    .resposta{
+        width: 320px;
+    }
+
+    .pergunta{
+        font-size: 18px;
+    }
+}
+
